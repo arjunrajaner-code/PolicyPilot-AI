@@ -2,117 +2,147 @@
 
 ### Your Intelligent Gateway to Company Policies
 
-\<p align="center">
-&#x20; \<b>Ask Smarter. Discover Faster. Understand Better.\</b>
-\</p>
+**Ask Smarter. Discover Faster. Understand Better.**
 
-\<p align="center">
-&#x20; An Agentic AI-powered company policy assistant that discovers official policy documents and transforms them into clear, context-aware answers using RAG and Large Language Models.
-\</p>
+An Agentic AI-powered company policy assistant that discovers official policy documents and transforms them into clear, context-aware answers using Retrieval-Augmented Generation (RAG) and Large Language Models.
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge\&logo=python\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/LLM-Groq-F55036?style=for-the-badge](https://img.shields.io/badge/LLM-Groq-F55036?style=for-the-badge)" />
-&#x20; \<img src="[https://img.shields.io/badge/RAG-Enabled-8A2BE2?style=for-the-badge](https://img.shields.io/badge/RAG-Enabled-8A2BE2?style=for-the-badge)" />
-&#x20; \<img src="[https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white](https://img.shields.io/badge/UI-Streamlit-FF4B4B?style=for-the-badge\&logo=streamlit\&logoColor=white)" />
-&#x20; \<img src="[https://img.shields.io/badge/Vector%20DB-ChromaDB-green?style=for-the-badge](https://img.shields.io/badge/Vector%20DB-ChromaDB-green?style=for-the-badge)" />
-\</p>
 
-\<p align="center">
-&#x20; \<a href="[https://github.com/arjunrajaner-code/PolicyPilot-AI](https://github.com/arjunrajaner-code/PolicyPilot-AI)">GitHub Repository\</a> •
-&#x20; \<a href="#-features">Features\</a> •
-&#x20; \<a href="#-architecture">Architecture\</a> •
-&#x20; \<a href="#-installation--setup">Installation\</a>
-\</p>
+
+
+\
+
+
+[GitHub Repository](https://github.com/arjunrajaner-code/PolicyPilot-AI) | [Features](#-key-features) | [Architecture](#-system-architecture) | [Installation](#-installation--setup)
 
 ---
 
-## 💡 What is PolicyPilot AI?
+## 💡 About the Project
 
-Finding company policies shouldn't feel like searching for a needle in a haystack.
+Finding accurate company policy information can be difficult. Employees often need to search through multiple websites, lengthy documents, and different information sources to understand company rules and benefits.
 
-Employees often struggle to find accurate information about leave policies, salary benefits, holidays, remote work, and workplace guidelines.
+**PolicyPilot AI** simplifies this process through an intelligent conversational assistant.
 
-**PolicyPilot AI** simplifies this experience.
+Users can ask questions in natural language, such as:
 
-It is an intelligent assistant that understands natural language questions, identifies the relevant company and policy topic, discovers official policy documents, and generates answers using a Retrieval-Augmented Generation (RAG) pipeline.
+- Does Amazon provide paid leave?
+- What is Google's work-from-home policy?
+- What are the company's employee benefits?
 
-Instead of manually searching multiple websites and documents, users can simply ask a question and receive an AI-generated response based on retrieved policy information.
+The system understands the question, identifies the company and policy topic, discovers relevant policy documents, retrieves useful information, and generates a context-based response using an LLM.
 
-> **The vision:** Make company policy information easier to discover, access, and understand.
+### 🎯 Project Objective
 
----
-
-## 🎯 The Problem We Solve
-
-| Traditional Approach                | PolicyPilot AI                       |
-| ----------------------------------- | ------------------------------------ |
-| Manually searching company websites | Automated policy discovery           |
-| Reading lengthy documents           | Context-based AI answers             |
-| Repeated document searches          | Document history and reuse           |
-| Keyword-based searching             | Semantic search                      |
-| Switching between multiple sources  | Centralized conversational interface |
+To develop an intelligent Agentic AI system that automates company policy discovery and helps users understand policy information through conversational AI.
 
 ---
 
-## ✨ Features That Make It Intelligent
+## ❓ Problem Statement
 
-### 🤖 Agentic AI Query Understanding
+Traditional company policy discovery involves several challenges:
 
-Understands natural language questions and identifies the company and relevant policy topic using an LLM.
+- Manually searching multiple company websites.
+- Reading lengthy policy documents.
+- Difficulty identifying relevant information.
+- Repeated searches for previously discovered documents.
+- Finding meaningful information using simple keyword searches.
 
-### 🔍 Intelligent Policy Discovery
+### 💡 Our Solution
 
-Uses DuckDuckGo search to discover relevant company policy documents and prioritizes official company sources.
+PolicyPilot AI combines Agentic AI, automated document discovery, semantic search, and RAG to simplify the entire process.
 
-### 📄 Automated Document Processing
-
-Extracts text from supported PDF and HTML documents and prepares the content for retrieval.
-
-### 🧠 Semantic Search Engine
-
-Uses Sentence Transformers to generate embeddings and ChromaDB to retrieve relevant document chunks.
-
-### 📚 Retrieval-Augmented Generation
-
-Combines retrieved policy context with Groq LLM to generate relevant, context-grounded answers.
-
-### 💾 Smart Document History
-
-Uses SQLite to store document history and reuse suitable previously saved documents based on the configured freshness policy.
-
-### ⚡ Groq LLM Integration
-
-Uses Groq API for fast language model inference and natural language understanding.
-
-### 💬 Interactive AI Interface
-
-Provides a conversational experience through a Streamlit-based web application.
+| Traditional Approach         | PolicyPilot AI             |
+| ---------------------------- | -------------------------- |
+| Manual document searching    | Automated policy discovery |
+| Reading lengthy documents    | Context-based AI responses |
+| Repeated document searches   | Document history and reuse |
+| Keyword-based searching      | Semantic retrieval         |
+| Multiple information sources | Conversational interface   |
 
 ---
 
-## 🏗️ Architecture
+## ✨ Key Features
 
-PolicyPilot AI combines Agentic AI, document discovery, semantic retrieval, and LLM-powered answer generation.
+### 🤖 1. Agentic AI Query Understanding
+
+- Understands natural language questions.
+- Identifies the company name.
+- Extracts the relevant policy topic.
+- Determines whether the query relates to company policies.
+
+### 🔍 2. Intelligent Policy Discovery
+
+- Uses DuckDuckGo search to discover policy documents.
+- Searches for relevant company information.
+- Prioritizes official company domains.
+- Identifies potential document sources.
+
+### 📄 3. Automated Document Processing
+
+- Extracts text from supported PDF and HTML documents.
+- Processes extracted content.
+- Divides information into manageable text chunks.
+
+### 🧠 4. Semantic Search
+
+- Generates embeddings using Sentence Transformers.
+- Uses ChromaDB for vector storage.
+- Retrieves relevant document chunks based on semantic similarity.
+
+### 📚 5. RAG-Based Question Answering
+
+- Combines retrieved document context with an LLM.
+- Generates context-grounded responses.
+- Provides available source information.
+- Reduces unsupported answers through context-based prompting.
+
+### 💾 6. Document History Management
+
+- Uses SQLite to maintain document history.
+- Checks previously saved documents.
+- Reuses suitable saved documents based on the configured freshness policy.
+
+### ⚡ 7. Groq LLM Integration
+
+- Uses Groq API for language model inference.
+- Supports query understanding and answer generation.
+- Provides configurable model settings.
+
+### 💬 8. Interactive Web Interface
+
+- Built using Streamlit.
+- Provides a conversational user experience.
+- Allows users to ask company policy questions.
+
+---
+
+## 🏗️ System Architecture
+
+PolicyPilot AI follows an Agentic AI and Retrieval-Augmented Generation architecture.
 
 ```mermaid
 flowchart TD
     A["👤 User Question"] --> B["💬 Streamlit Interface"]
     B --> C["🤖 Agentic AI Controller"]
     C --> D["🧠 Query Understanding - Groq"]
-    D --> E["🏢 Company & Policy Identification"]
+    D --> E["🏢 Company and Policy Identification"]
     E --> F["💾 Document History - SQLite"]
+
     F --> G{"Document Available?"}
+
     G -->|Yes| H["📄 Load Saved Document"]
     G -->|No| I["🔍 DuckDuckGo Search"]
+
     I --> J["🌐 Discover Official Sources"]
     J --> K["📄 Extract PDF / HTML Content"]
     K --> L["💾 Save Document History"]
+
     H --> M["✂️ Text Chunking"]
     L --> M
-    M --> N["🔢 Sentence Transformer Embeddings"]
-    N --> O[("🗄️ ChromaDB")]
-    O --> P["🎯 Relevant Chunk Retrieval"]
+
+    M --> N["🔢 Generate Embeddings"]
+    N --> O[("🗄️ ChromaDB Vector Database")]
+
+    O --> P["🎯 Retrieve Relevant Chunks"]
     P --> Q["📚 RAG Pipeline"]
     Q --> R["⚡ Groq LLM"]
     R --> S["✅ Context-Based Answer"]
@@ -121,41 +151,41 @@ flowchart TD
 
 ---
 
-## ⚙️ How the System Works
+## 🔄 How It Works
 
-| Stage | Process                            | Technology            |
-| ----- | ---------------------------------- | --------------------- |
-| 01    | Understand user query              | Groq LLM              |
-| 02    | Identify company and policy topic  | Agentic AI            |
-| 03    | Check saved document history       | SQLite                |
-| 04    | Discover relevant policy documents | DuckDuckGo            |
-| 05    | Extract document content           | BeautifulSoup / PyPDF |
-| 06    | Split content into chunks          | Python                |
-| 07    | Generate vector embeddings         | Sentence Transformers |
-| 08    | Store and retrieve information     | ChromaDB              |
-| 09    | Generate contextual answers        | RAG + Groq            |
+| Step | Process                           | Technology            |
+| ---- | --------------------------------- | --------------------- |
+| 01   | Receive user question             | Streamlit             |
+| 02   | Understand the query              | Groq LLM              |
+| 03   | Identify company and policy topic | Agentic AI            |
+| 04   | Check document history            | SQLite                |
+| 05   | Discover policy documents         | DuckDuckGo            |
+| 06   | Extract document content          | PyPDF / BeautifulSoup |
+| 07   | Split content into chunks         | Python                |
+| 08   | Generate embeddings               | Sentence Transformers |
+| 09   | Store and retrieve vectors        | ChromaDB              |
+| 10   | Generate contextual answers       | RAG + Groq            |
 
 ---
 
 ## 🛠️ Technology Stack
 
-\<p align="center">
-&#x20; \<img src="[https://skillicons.dev/icons?i=python,sqlite,git,github](https://skillicons.dev/icons?i=python,sqlite,git,github)" />
-\</p>
-
-| Category             | Technologies            |
-| -------------------- | ----------------------- |
-| Programming Language | Python                  |
-| Large Language Model | Groq API                |
-| LLM Model            | `openai/gpt-oss-20b`    |
-| Frontend             | Streamlit               |
-| AI Architecture      | Agentic AI, RAG         |
-| Embedding Model      | `all-MiniLM-L6-v2`      |
-| Vector Database      | ChromaDB                |
-| Search               | DuckDuckGo              |
-| Database             | SQLite                  |
-| Document Processing  | PyPDF, BeautifulSoup    |
-| API & Configuration  | Requests, Python-dotenv |
+| Category               | Technology                               |
+| ---------------------- | ---------------------------------------- |
+| Programming Language   | Python                                   |
+| LLM Provider           | Groq API                                 |
+| LLM Model              | `openai/gpt-oss-20b`                     |
+| Frontend               | Streamlit                                |
+| AI Architecture        | Agentic AI                               |
+| Retrieval Architecture | RAG                                      |
+| Embedding Model        | `sentence-transformers/all-MiniLM-L6-v2` |
+| Vector Database        | ChromaDB                                 |
+| Web Search             | DuckDuckGo                               |
+| Database               | SQLite                                   |
+| PDF Processing         | PyPDF                                    |
+| HTML Processing        | BeautifulSoup                            |
+| HTTP Requests          | Requests                                 |
+| Environment Management | Python-dotenv                            |
 
 ---
 
@@ -164,139 +194,155 @@ flowchart TD
 ```text
 PolicyPilot-AI/
 │
-├── app.py                  # Streamlit user interface
+├── app.py                  # Streamlit application
 ├── agent.py                # Agentic AI controller
 ├── rag_chat.py             # RAG question-answering pipeline
 │
 ├── web_search.py            # Company policy discovery
-├── document_loader.py      # PDF and HTML extraction
+├── document_loader.py      # PDF and HTML document extraction
 ├── document_history.py     # SQLite history management
 │
 ├── chunk_text.py            # Text chunking
-├── build_vector_db.py       # Embedding and ChromaDB setup
+├── build_vector_db.py       # Embedding and vector database setup
 ├── read_pdf.py              # PDF reading utility
 │
 ├── requirements.txt          # Project dependencies
-├── .env.example              # Environment configuration template
 ├── .gitignore                # Git ignored files
-└── README.md                 # Project documentation
+├── README.md                 # Project documentation
+│
+└── Local Data
+    ├── documents/
+    ├── data/
+    ├── chroma_db/
+    └── document_history.db
 ```
 
-*Generated vector databases, local documents, environment secrets, and temporary data are maintained locally and excluded from version control.*
+*Note: Local documents, generated vector databases, environment secrets, and temporary data are excluded from the public Git repository.*
 
 ---
 
 ## 🚀 Installation & Setup
 
-Follow these steps to run PolicyPilot AI locally.
+Follow these steps to run PolicyPilot AI on your local machine.
 
-### 1. Clone the Repository
+### Prerequisites
+
+- Python 3.10 or later
+- Git
+- VS Code or another Python IDE
+- Groq API key
+
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/arjunrajaner-code/PolicyPilot-AI.git
 ```
 
+### Step 2: Navigate to the Project
+
 ```bash
 cd PolicyPilot-AI
 ```
 
-### 2. Create a Virtual Environment
+### Step 3: Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-Activate on Windows:
+Activate on Windows PowerShell:
 
 ```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-### 3. Install Dependencies
+### Step 4: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Configure API Credentials
+### Step 5: Configure Environment Variables
 
-Create a `.env` file in the root directory.
+Create a `.env` file in the project root directory.
+
+Add the following configuration:
 
 ```env
 GROQ_API_KEY=your_groq_api_key
 GROQ_MODEL=openai/gpt-oss-20b
 ```
 
-Replace the placeholder with your own Groq API key.
+Replace `your_groq_api_key` with your actual Groq API key.
 
-**Security:** Never commit your `.env` file or expose API credentials in your repository.
+**Security Notice:** Never upload your `.env` file or expose API credentials in your public repository.
 
-### 5. Launch the Application
+### Step 6: Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Open the local URL displayed in your terminal to interact with the application.
+Open the local URL displayed in your terminal to access the application.
 
 ---
 
-## 💬 Try Asking PolicyPilot AI
+## 💬 Example Questions
 
-Here are some example questions:
+Try asking PolicyPilot AI questions like these:
 
-**🏖️ Leave & Holidays**
+### 🏖️ Leave and Holiday Policies
 
 - Does Amazon provide paid leave?
 - What is the maternity leave policy?
 - How many annual leave days are available?
 
-**🏠 Remote Work**
+### 🏠 Work From Home Policies
 
 - Does Google allow employees to work remotely?
-- What are Microsoft's work-from-home guidelines?
+- What are Microsoft's remote work guidelines?
 
-**💰 Salary & Benefits**
+### 💰 Salary and Employee Benefits
 
 - Does the company provide salary during approved leave?
 - What employee benefits are mentioned in the policy?
 
-**🏢 Workplace Guidelines**
+### 🏢 Workplace Guidelines
 
 - What are the company's attendance rules?
-- What is the holiday policy?
+- What is the company's holiday policy?
 
-*Actual answers depend on the availability, relevance, and accuracy of retrieved documents.*
+*The availability and accuracy of answers depend on the relevance and completeness of the retrieved documents.*
 
 ---
 
-## 🔐 Reliability & Responsible AI
+## 🔐 Reliability and Responsible AI
 
-PolicyPilot AI is designed to generate answers using retrieved document context.
+PolicyPilot AI is designed to generate answers based on retrieved document context.
 
 - Prioritizes official company sources where available.
 - Uses retrieved information as the basis for answer generation.
-- May report insufficient evidence when relevant information is unavailable.
+- May indicate when sufficient evidence is unavailable.
 - Does not guarantee that every discovered document is current or complete.
-- Company policies may vary by country, employee category, and employment status.
+- Company policies may differ by country, employment type, and employee category.
 - Important employment decisions should always be verified against official HR documentation.
 
 ---
 
-## 🗺️ Future Roadmap
+## 🗺️ Future Enhancements
 
-The project can be extended with the following capabilities:
+The following improvements are planned for future versions:
 
-- [ ] Country-specific policy identification
-- [ ] Employee-type-aware policy retrieval
-- [ ] Advanced multi-agent orchestration
-- [ ] Improved source verification
-- [ ] RAG evaluation using TruLens
-- [ ] Real-time document freshness monitoring
-- [ ] Streaming AI responses
-- [ ] Enhanced conversation memory
-- [ ] Cloud deployment
-- [ ] Automated testing and CI/CD
+- [ ] Country-specific policy identification.
+- [ ] Employee-type-aware policy retrieval.
+- [ ] Advanced multi-agent orchestration.
+- [ ] Improved official-source verification.
+- [ ] RAG evaluation using TruLens.
+- [ ] Real-time document freshness monitoring.
+- [ ] Streaming AI responses.
+- [ ] Enhanced conversation memory.
+- [ ] Cloud deployment.
+- [ ] Automated testing and CI/CD integration.
 
 ---
 
@@ -304,7 +350,7 @@ The project can be extended with the following capabilities:
 
 PolicyPilot AI demonstrates how modern AI technologies can transform traditional information discovery into an intelligent conversational experience.
 
-By combining Agentic AI, LLMs, RAG, semantic search, and automated document discovery, the project aims to make complex company policy information more accessible and understandable.
+By combining Agentic AI, Large Language Models, RAG, semantic search, and automated document discovery, the project aims to make complex company policy information more accessible and understandable.
 
 ---
 
@@ -314,19 +360,16 @@ By combining Agentic AI, LLMs, RAG, semantic search, and automated document disc
 
 **AI & Data Science | AI Engineering | Agentic AI**
 
-\<p>
-&#x20; \<a href="[https://github.com/arjunrajaner-code](https://github.com/arjunrajaner-code)">
-&#x20;   \<img src="[https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github](https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge\&logo=github)" />
-&#x20; \</a>
-\</p>
+
 
 ---
 
 \<p align="center">
-&#x20; ⭐ If you find this project interesting, consider giving it a star!
-\</p>
 
-\<p align="center">
-&#x20; \<b>PolicyPilot AI\</b>\<br/>
-&#x20; Making Company Policies Easier to Understand. 🚀
+⭐ If you find this project interesting, consider giving the repository a star!
+
+**PolicyPilot AI**
+
+*Making Company Policies Easier to Understand.* 🚀
+
 \</p>
